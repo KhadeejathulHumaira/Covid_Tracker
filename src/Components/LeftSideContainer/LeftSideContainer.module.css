@@ -2,3 +2,10 @@
     width:1070px;
     flex: 0.9 1;
 }
+@media (max-width:500px){
+    .container{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+    }
+}

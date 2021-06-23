@@ -21,8 +21,8 @@ function RightSideContainer() {
         })
     },[])
     return (
-        <div className={style.container}>
-            <Card>
+        <div >
+            <Card  className={style.container}>
                 <CardContent>
                     <h3>Live Cases By Country</h3>
                     <Table tableData={countriesData}/>

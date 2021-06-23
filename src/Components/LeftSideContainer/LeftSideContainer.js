@@ -26,11 +26,6 @@ function LeftSideContainer() {
     useEffect(()=>{
         getCountries()
     },[])
-
-
-
-
-
     return (
         <div className={style.container}>
             <LeftSubContainer countries={countries} mapCountries={mapCountries}/>

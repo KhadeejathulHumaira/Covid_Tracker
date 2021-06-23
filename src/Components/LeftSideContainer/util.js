@@ -25,10 +25,9 @@ const casesTypeColors = {
   };
 
 export const prettyPrint=(stat)=> 
-    stat ? `${numeral(stat).format("0.0a")}` : "+0";
+    stat ? `${numeral(stat).format("0.0a")}` : "0";
 
 export const showData=(data,caseType="cases")=>(
-    console.log('sh',casesTypeColors[caseType].hex),
     data.map((country)=>(
         <Circle
         center={[country.countryInfo.lat,country.countryInfo.long]}

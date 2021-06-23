@@ -49,7 +49,7 @@ function LeftSubContainer({countries,mapCountries}) {
     }
 
     return (
-        <div>
+        <div className={style.subContainer}>
         <div className={style.header}>
             <h1 className={style.h1}> Covid-19 Tracker</h1>
             <FormControl>
@@ -72,22 +72,24 @@ function LeftSubContainer({countries,mapCountries}) {
             cases={prettyPrint( countryInfo.todayCases)}
             onClick={e=>setCaseType('cases')}
             total={prettyPrint(countryInfo.cases) }
-        
-            color="red"/>
+            active={caseType==="cases"}  
+            isRed      
+            />
 
             <CountContainer title="Recovered" 
             onClick={e=>setCaseType('recovered')}
             cases={prettyPrint(countryInfo.todayRecovered)}
             total={prettyPrint(countryInfo.recovered)}
-           
-            color="green"/>
+            active={caseType==="recovered"}  
+           />
 
             <CountContainer title="Death" 
             onClick={e=>setCaseType('deaths')}
             cases={prettyPrint(countryInfo.todayDeaths)}
             total={prettyPrint(countryInfo.deaths)}
-          
-            color="orange"/>
+            active={caseType==="deaths"}  
+            isRed
+            />
         </div>
 
         <Map center={mapCenter} zoom={mapZoom} countries={mapCountries}  caseType={caseType}/>
