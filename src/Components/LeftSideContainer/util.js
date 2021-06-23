@@ -45,7 +45,7 @@ export const showData=(data,caseType="cases")=>(
                    ></div>
                    <div className={style.infoCountry}>{country.country}</div>
                    <div  className={style.infoConfirmed}> Cases: {numeral(country.cases).format("0,0")}</div>
-                   <div  className={style.infoRecovered}>Recovered:{numeral(country.recoverd).format("0,0")}</div>
+                   <div  className={style.infoRecovered}>Recovered:{numeral(country.recovered).format("0,0")}</div>
                    <div  className={style.infoDeaths}>Death:{numeral(country.deaths).format("0,0")}</div>
                </div>
 
